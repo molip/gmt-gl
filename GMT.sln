@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27703.2000
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "GMT", "GMT.vcxproj", "{36166D9B-8254-4DB1-B97D-4DE45DAB0B32}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Jig", "libraries\lib\Jig\Jig.vcxproj", "{6C7150C0-A88C-49ED-8B19-398E2764E4CB}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "SFML", "libraries\lib\SFML.vcxproj", "{EFAA95A4-B8DB-4DDC-BE7B-EE76FAA57513}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x64 = Debug|x64
+		Release|x64 = Release|x64
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{36166D9B-8254-4DB1-B97D-4DE45DAB0B32}.Debug|x64.ActiveCfg = Debug|x64
+		{36166D9B-8254-4DB1-B97D-4DE45DAB0B32}.Debug|x64.Build.0 = Debug|x64
+		{36166D9B-8254-4DB1-B97D-4DE45DAB0B32}.Release|x64.ActiveCfg = Release|x64
+		{36166D9B-8254-4DB1-B97D-4DE45DAB0B32}.Release|x64.Build.0 = Release|x64
+		{6C7150C0-A88C-49ED-8B19-398E2764E4CB}.Debug|x64.ActiveCfg = Debug|x64
+		{6C7150C0-A88C-49ED-8B19-398E2764E4CB}.Debug|x64.Build.0 = Debug|x64
+		{6C7150C0-A88C-49ED-8B19-398E2764E4CB}.Release|x64.ActiveCfg = Release|x64
+		{6C7150C0-A88C-49ED-8B19-398E2764E4CB}.Release|x64.Build.0 = Release|x64
+		{EFAA95A4-B8DB-4DDC-BE7B-EE76FAA57513}.Debug|x64.ActiveCfg = Debug|x64
+		{EFAA95A4-B8DB-4DDC-BE7B-EE76FAA57513}.Debug|x64.Build.0 = Debug|x64
+		{EFAA95A4-B8DB-4DDC-BE7B-EE76FAA57513}.Release|x64.ActiveCfg = Release|x64
+		{EFAA95A4-B8DB-4DDC-BE7B-EE76FAA57513}.Release|x64.Build.0 = Release|x64
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {1B2CBB8C-FF4B-49AF-9607-9D4BF0A90916}
+	EndGlobalSection
+EndGlobal
