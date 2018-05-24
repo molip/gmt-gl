@@ -3,12 +3,37 @@
   <ItemGroup>
     <Filter Include="Source Files">
       <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
-      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+      <Extensions>
+      </Extensions>
     </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="Object.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="View.cpp" />
+    <ClCompile Include="MainView.cpp" />
+    <ClCompile Include="PanelView.cpp" />
+    <ClCompile Include="Control.cpp" />
+    <ClCompile Include="Font.cpp" />
+    <ClCompile Include="Button.cpp" />
+    <ClCompile Include="SFUtil.cpp" />
+    <ClCompile Include="Window.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Object.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="View.h" />
+    <ClInclude Include="MainView.h" />
+    <ClInclude Include="PanelView.h" />
+    <ClInclude Include="Control.h" />
+    <ClInclude Include="Font.h" />
+    <ClInclude Include="Button.h" />
+    <ClInclude Include="SFUtil.h" />
+    <ClInclude Include="Window.h" />
   </ItemGroup>
 </Project>

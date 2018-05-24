@@ -1,3 +1,7 @@
+#include "MainView.h"
+#include "PanelView.h"
+#include "Window.h"
+
 #include <SFML/Graphics.hpp>
 #include <SFML/OpenGL.hpp>
 
@@ -5,8 +9,9 @@
 
 int main()
 {
-	sf::ContextSettings settings;
-	sf::RenderWindow window(sf::VideoMode(1024, 768), "GMT", sf::Style::Default, settings);
+	Window window;
+	window.setPosition({1730, 1050});
+	window.setSize({ 1920 * 4 / 5 + 300, 1080 * 4 / 5 }); // TODO: Get from Window.
 	window.setFramerateLimit(30);
 
 	while (window.isOpen())
@@ -14,15 +19,26 @@ int main()
         sf::Event event;
         while (window.pollEvent(event))
         {
-			if (event.type == sf::Event::Closed)
+			switch (event.type)
+			{
+			case sf::Event::Closed:
 				window.close();
+				break;
 
-			if (event.type == sf::Event::KeyPressed)
+			case sf::Event::KeyPressed:
 				if (event.key.code == sf::Keyboard::Escape)
-			       window.close();
-        }
+					window.close();
+				break;
 
-		window.display();
+			case sf::Event::MouseMoved:
+				window.OnMouseMoved(event.mouseMove);
+				break;
+			}
+		}
+
+		window.Draw();
+
+		::Sleep(1);
     }
 
     return EXIT_SUCCESS;
