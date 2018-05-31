@@ -1,8 +1,8 @@
 #pragma once
 
-#include "View.h"
+#include "gmt/View.h"
 
-class Control : public View
+class Control : public GMT::View
 {
 public:
 	Control();

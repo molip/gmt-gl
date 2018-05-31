@@ -1,5 +1,6 @@
 #include "Button.h"
-#include "Font.h"
+
+#include "gmt/Font.h"
 
 #include "SFML/Graphics.hpp"
 
@@ -16,7 +17,7 @@ void Button::Draw(sf::RenderWindow& window) const
 	rectShape.setOutlineThickness(1);
 	window.draw(rectShape);
 
-	sf::Text text("Hello", Font::Get());
+	sf::Text text("Hello", GMT::Font::Get());
 	text.setCharacterSize(m_rect.height - 8);
 	text.setColor(sf::Color::Black);
 

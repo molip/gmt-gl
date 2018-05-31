@@ -1,8 +1,8 @@
 #pragma once
 
-#include "View.h"
+#include "gmt/View.h"
 
-class PanelView : public View
+class PanelView : public GMT::View
 {
 public:
 	PanelView();

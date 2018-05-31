@@ -12,7 +12,7 @@
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{36166D9B-8254-4DB1-B97D-4DE45DAB0B32}</ProjectGuid>
-    <RootNamespace>GMT</RootNamespace>
+    <RootNamespace>GMT-GL</RootNamespace>
     <WindowsTargetPlatformVersion>10.0.17134.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -33,14 +33,14 @@
   <ImportGroup Label="ExtensionSettings">
   </ImportGroup>
   <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="PropertySheets">
-    <Import Project="libraries\lib\PropertySheets\Dev.props" />
-    <Import Project="libraries\lib\PropertySheets\SFML.props" />
+    <Import Project="gmt\libraries\lib\PropertySheets\Dev.props" />
+    <Import Project="gmt\libraries\lib\PropertySheets\SFML.props" />
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
   </ImportGroup>
   <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="PropertySheets">
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
-    <Import Project="libraries\lib\PropertySheets\Dev.props" />
-    <Import Project="libraries\lib\PropertySheets\SFML.props" />
+    <Import Project="gmt\libraries\lib\PropertySheets\Dev.props" />
+    <Import Project="gmt\libraries\lib\PropertySheets\SFML.props" />
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
@@ -55,6 +55,7 @@
       <Optimization>Disabled</Optimization>
       <PreprocessorDefinitions>SFML_DYNAMIC;WIN32;_WINDOWS;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <SDLCheck>true</SDLCheck>
+      <AdditionalIncludeDirectories>gmt\libraries\lib\SFML\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <GenerateDebugInformation>true</GenerateDebugInformation>
@@ -70,6 +71,7 @@
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <PreprocessorDefinitions>SFML_DYNAMIC;WIN32;_WINDOWS;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>gmt\libraries\lib\SFML\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <GenerateDebugInformation>true</GenerateDebugInformation>
@@ -81,34 +83,24 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ProjectReference Include="libraries\lib\Jig\Jig.vcxproj">
-      <Project>{6c7150c0-a88c-49ed-8b19-398e2764e4cb}</Project>
+    <ProjectReference Include="gmt\GMT.vcxproj">
+      <Project>{e44fc021-674e-480e-b972-2ae58f8f067b}</Project>
     </ProjectReference>
-    <ProjectReference Include="libraries\lib\SFML.vcxproj">
+    <ProjectReference Include="gmt\libraries\lib\SFML.vcxproj">
       <Project>{efaa95a4-b8db-4ddc-be7b-ee76faa57513}</Project>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Button.cpp" />
     <ClCompile Include="Control.cpp" />
-    <ClCompile Include="Font.cpp" />
     <ClCompile Include="Main.cpp" />
-    <ClCompile Include="MainView.cpp" />
-    <ClCompile Include="Object.cpp" />
     <ClCompile Include="PanelView.cpp" />
-    <ClCompile Include="SFUtil.cpp" />
-    <ClCompile Include="View.cpp" />
     <ClCompile Include="Window.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Button.h" />
     <ClInclude Include="Control.h" />
-    <ClInclude Include="Font.h" />
-    <ClInclude Include="MainView.h" />
-    <ClInclude Include="Object.h" />
     <ClInclude Include="PanelView.h" />
-    <ClInclude Include="SFUtil.h" />
-    <ClInclude Include="View.h" />
     <ClInclude Include="Window.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

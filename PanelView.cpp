@@ -34,6 +34,4 @@ void PanelView::UpdateLayout(const sf::FloatRect logRect)
 
 void PanelView::OnMouseMoved(const sf::Vector2f position)
 {
-	std::cout << position.x << ',' << position.y << std::endl;
-
 }

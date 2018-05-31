@@ -1,28 +1,20 @@
 #pragma once
 
-#include "SFML/Graphics/RenderWindow.hpp"
-#include "SFML/Window/Event.hpp"
+#include "gmt/Window.h"
 
-#include <memory>
-#include <vector>
+namespace GMT
+{
+	class View;
+}
 
-class View;
-
-class Window : public sf::RenderWindow
+class Window : public GMT::Window
 {
 public:
 	Window();
 	virtual ~Window();
 
-	void Draw();
-
-	void OnMouseMoved(const sf::Event::MouseMoveEvent& event);
-
 private:
 	virtual void onResize() override;
 
-	std::unique_ptr<View> m_mainView;
-	std::unique_ptr<View> m_panelView;
-	std::vector<View*> m_views;
+	std::unique_ptr<GMT::View> m_panelView;
 };
-

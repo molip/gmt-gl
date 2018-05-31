@@ -1,16 +1,13 @@
-#include "MainView.h"
 #include "PanelView.h"
 #include "Window.h"
 
 #include <SFML/Graphics.hpp>
 #include <SFML/OpenGL.hpp>
 
-#include <gl/glu.h>
-
 int main()
 {
 	Window window;
-	window.setPosition({1730, 1050});
+	window.setPosition({30, 50});
 	window.setSize({ 1920 * 4 / 5 + 300, 1080 * 4 / 5 }); // TODO: Get from Window.
 	window.setFramerateLimit(30);
 
@@ -38,7 +35,7 @@ int main()
 
 		window.Draw();
 
-		::Sleep(1);
+//		::Sleep(1);
     }
 
     return EXIT_SUCCESS;
