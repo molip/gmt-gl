@@ -11,6 +11,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "SFML", "gmt\libraries\lib\S
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "libKernel", "gmt\libraries\libKernel\libKernel.vcxproj", "{A75566A2-3ED4-428B-B903-CB57DEFBC4BC}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Jig", "gmt\libraries\lib\Jig\Jig.vcxproj", "{6C7150C0-A88C-49ED-8B19-398E2764E4CB}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -33,6 +35,10 @@ Global
 		{A75566A2-3ED4-428B-B903-CB57DEFBC4BC}.Debug|x64.Build.0 = Debug|x64
 		{A75566A2-3ED4-428B-B903-CB57DEFBC4BC}.Release|x64.ActiveCfg = Release|x64
 		{A75566A2-3ED4-428B-B903-CB57DEFBC4BC}.Release|x64.Build.0 = Release|x64
+		{6C7150C0-A88C-49ED-8B19-398E2764E4CB}.Debug|x64.ActiveCfg = Debug|x64
+		{6C7150C0-A88C-49ED-8B19-398E2764E4CB}.Debug|x64.Build.0 = Debug|x64
+		{6C7150C0-A88C-49ED-8B19-398E2764E4CB}.Release|x64.ActiveCfg = Release|x64
+		{6C7150C0-A88C-49ED-8B19-398E2764E4CB}.Release|x64.Build.0 = Release|x64
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

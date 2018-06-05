@@ -11,6 +11,5 @@ public:
 
 private:
 	virtual void UpdateLayout(const sf::FloatRect logRect) override;
-	virtual void OnMouseMoved(const sf::Vector2f position) override;
 };
 

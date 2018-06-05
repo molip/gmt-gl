@@ -31,7 +31,3 @@ void PanelView::UpdateLayout(const sf::FloatRect logRect)
 		rect.top += height + gap;
 	}
 }
-
-void PanelView::OnMouseMoved(const sf::Vector2f position)
-{
-}

@@ -13,9 +13,9 @@ int main()
 
 	while (window.isOpen())
     {
-        sf::Event event;
-        while (window.pollEvent(event))
-        {
+		sf::Event event;
+		while (window.pollEvent(event))
+		{
 			switch (event.type)
 			{
 			case sf::Event::Closed:
@@ -26,16 +26,12 @@ int main()
 				if (event.key.code == sf::Keyboard::Escape)
 					window.close();
 				break;
-
-			case sf::Event::MouseMoved:
-				window.OnMouseMoved(event.mouseMove);
-				break;
 			}
+
+			window.PumpEvent(event);
 		}
 
 		window.Draw();
-
-//		::Sleep(1);
     }
 
     return EXIT_SUCCESS;
