@@ -13,4 +13,17 @@
     <ClInclude Include="Button.h" />
     <ClInclude Include="Control.h" />
   </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Docs">
+      <UniqueIdentifier>{d779c4d5-d4aa-479c-9776-7e3330edf123}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="README.txt">
+      <Filter>Docs</Filter>
+    </Text>
+    <Text Include="Changelog.txt">
+      <Filter>Docs</Filter>
+    </Text>
+  </ItemGroup>
 </Project>

@@ -1,0 +1,6 @@
+v0.1 (29/07/18)
+* New, Save, Save As, Open
+* Undo, Redo
+* Create rooms 
+* Add internal/external rooms
+* Add / delete / move points

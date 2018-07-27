@@ -7,7 +7,7 @@
 
 PanelView::PanelView()
 {
-	m_children.push_back(std::make_unique<Button>());
+	//m_children.push_back(std::make_unique<Button>());
 }
 
 void PanelView::Draw(sf::RenderWindow& window) const
