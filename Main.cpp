@@ -6,9 +6,9 @@
 #include <SFML/Graphics.hpp>
 #include <SFML/OpenGL.hpp>
 
-int main()
+int wmain(int argc, wchar_t* argv[])
 {
-	GMT::App app;
+	GMT::App app(std::vector<std::wstring>(argv, argv + argc));
 
 	Window window;
 	window.setPosition({30, 50});
