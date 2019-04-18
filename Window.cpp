@@ -29,10 +29,10 @@ void Window::onResize()
 	mainRect.top += ViewGap;
 	mainRect.height -= ViewGap * 2;
 	mainRect.width -= PanelWidth + ViewGap * 2;
-	m_mainView->SetRect(mainRect);
+	m_mainView->Arrange(mainRect);
 
 	sf::IntRect panelRect = windowRect;
 	panelRect.width = PanelWidth;
 	panelRect.left = windowRect.width - PanelWidth;
-	m_panelView->SetRect(panelRect);
+	m_panelView->Arrange(panelRect);
 }

@@ -5,47 +5,23 @@
 
 #include <iostream>
 
-class Container : public Control
-{
-public:
-
-protected:
-	virtual void UpdateLayout(const sf::FloatRect logRect) override;
-
-private:
-};
-
-void Container::UpdateLayout(const sf::FloatRect logRect)
-{
-	const int height = 30;
-	const int gap = 10;
-
-	sf::IntRect rect(gap, gap, (int)logRect.width - gap * 2, height);
-
-	for (auto& control : m_children)
-	{
-		control->SetRect(rect);
-		rect.top += height + gap;
-	}
-}
-
-
-
 
 PanelView::PanelView()
 {
-	//m_children.push_back(std::make_unique<Button>());
+	auto& scroller = AddChild(std::make_unique<ScrollerControl>());
+	auto& list = scroller.AddChild(std::make_unique<ListControlVert>());
+	
+	for (int i = 0; i < 30; ++i)
+		list.AddChild(std::make_unique<Button>());
 }
 
-void PanelView::Draw(sf::RenderWindow& window) const
+void PanelView::Arrange(const sf::IntRect& rect)
 {
-	sf::RectangleShape rectShape;
-	rectShape.setSize(sf::Vector2f((float)m_rect.width, (float)m_rect.height));
-	rectShape.setFillColor(sf::Color::White);
-	window.draw(rectShape);
-}
+	__super::Arrange(rect);
 
-void PanelView::UpdateLayout(const sf::FloatRect logRect)
-{
+	const int pad = 10;
 
+	sf::IntRect cellRect(rect.left + pad, rect.top + pad, rect.width - pad * 2, rect.height - pad * 2);
+
+	m_children.front()->Arrange(cellRect);
 }

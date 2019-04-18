@@ -25,3 +25,8 @@ void Button::Draw(sf::RenderWindow& window) const
 	text.setPosition((m_rect.width - bounds.width) / 2, (m_rect.height - bounds.height) / 2 - bounds.top);
 	window.draw(text);
 }
+
+sf::Vector2i Button::GetIdealSize(const sf::Vector2i& available) const
+{
+	return { 80, 20 };
+}

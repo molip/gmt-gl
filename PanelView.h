@@ -1,15 +1,13 @@
 #pragma once
 
-#include "gmt/View.h"
+#include "Control.h"
 
-class PanelView : public GMT::View
+class PanelView : public Control
 {
 public:
 	PanelView();
 
-	virtual void Draw(sf::RenderWindow& window) const override;
-
 private:
-	virtual void UpdateLayout(const sf::FloatRect logRect) override;
+	virtual void Arrange(const sf::IntRect& rect) override;
 };
 
